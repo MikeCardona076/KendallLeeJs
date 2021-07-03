@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <style>
+            div{
+                background-image: url("fondo.jpg");
+                color: white;
+                
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                opacity: 5;
+            }
+  
+            h4, h2, h5 {
+                background-color:rgba(4, 195, 243, 0.637);
+                display: inline;
+
+            }
+
+
+        </style>
+        
+        
+    </head>
+    <body>
+        <div class="card text-center">
+            <div class="card-body" >
+              <h5 class="card-title" >Teoría de Colas Notación de Kendall</h5>
+              <br />
+              <h4 class="card-text">
+                La teoría de colas es el estudio de los sistemas de
+                líneas de espera en sus distintas modalidades.
+                <br />
+                ● El estudio de estos modelos sirve para determinar
+                la forma más efectiva de gestionar un sistema de
+                colas
+                <br />
+                – Demasiada capacidad de servicio => Excesivos gastos
+                <br />
+                – Poca capacidad de servicio => Mal servicio
+                <br />
+                ● Objetivo: encontrar un balance adecuado entre el
+                coste del servicio y los tiempos de espera</h4>
+                <br />
+              <h4 class="card-text">Miguel Angel Cardona Contreras</h4>
+            </div>
+            
+            <div id="app">
+
+                <h2>Tiempo de llegada</h2>
+                <input v-model="tiempollegada">
+                <h2>Tiempo de Servicio</h2>
+                <input v-model="tiempoServicio">
+                <button v-on:click="LambdaMiu">Resultado</button>
+                <br />
+                <h4>Promedio de personas en el sistema {{ promediodeunidadesenelsistema  }}</h4>
+                <br />
+                <h4>Tiempo total de consumo del sistema {{ tiempoconsumosistema  }}</h4>
+                <br />
+                <h4>Tiempo promedio de pacientes haciendo fila   {{ tiempopromediofila  }}</h4>
+                
+                
+                
+                
+            </div>
+
+            </div>
+        </div>
+
+
+        <script src="kendall.js"></script>
+
+    </body>
+</html>
